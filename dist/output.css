@@ -521,8 +521,24 @@ video {
   display: flex;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .w-3\/6 {
   width: 50%;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-row {
@@ -625,24 +641,12 @@ video {
   justify-content: space-evenly;
 }
 
-.bg-violet-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(91 33 182 / var(--tw-bg-opacity));
-}
-
-.delay-500 {
-  transition-delay: 500ms;
-}
-
-.duration-700 {
-  transition-duration: 700ms;
-}
-
 *{
   border : 1px solid red;
-  padding : 5px;
   color: white;
   background:black;
+  font-size:25px;
+  padding : 2px 2px;
 }
 
 .hover\:cursor-pointer:hover {

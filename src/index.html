@@ -11,14 +11,16 @@
     <div class="w-3/6">
         <form>
             <div class="head">
-                CSS
+                CSS flex-box Visualizer
             </div>
+
+
             <div class="b0">
             
                 <!-- Body properties -->
-                <div class="flex">
-                    <div id="l0" class="bg-violet-800 hover:cursor-pointer">
-                        <img src="" alt="">
+                <div class="flex  hover:cursor-pointer" onclick="hide(0)">
+                    <div id="l0">
+                        <img class=" w-8 h-8" src="../2.png" alt="">
                     </div>
                     <div class="t00">
                         Body
@@ -36,6 +38,9 @@
                             <option id="o" value="1">Flex</option>
                         </select>
                     </div>
+
+
+
                     <!-- Body flex directions  -->
                     <div class="flex"  id="flx">
                         <div class="f0" for="p01">
@@ -112,19 +117,268 @@
                     </div>
                 </div>
             </div>
+
             <div class="b1">
-
+                <div class="flex cursor-pointer" onclick="hide(1)">
+                    <div id="l1">
+                        <img class=" w-8 h-8" src="../2.png" alt="">
+                    </div>
+                    <div class="t00">
+                        block 1
+                    </div>
+                </div>
+                <div class="block1hide" id="block1hide">
+                    <div class="flex">
+                        <div id="order" for="o1">
+                            Order : 
+                        </div>
+                        <select name="o1" id="o1">
+                            <option id="o" value="0">Select Value</option>
+                            <option id="o" value="1">1</option>
+                            <option id="o" value="2">2</option>
+                            <option id="o" value="3">3</option>
+                            <option id="o" value="4">4</option>
+                            <option id="o" value="5">first</option>
+                            <option id="o" value="6">last</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <div id="flexgrow" for="fg1">
+                            flex-grow : 
+                        </div>
+                        <select name="fg1" id="fg1">
+                            <option id="o" value="null">Select Value</option>
+                            <option id="o" value="0">0</option>
+                            <option id="o" value="1">1</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <div id="flexshrink" for="fs1">
+                            flex-Shrink : 
+                        </div>
+                        <select name="fs1" id="fs1">
+                            <option id="o" value="null">Select Value</option>
+                            <option id="o" value="0">0</option>
+                            <option id="o" value="1">1</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <label for="flexbasis1">flex-basis : </label>
+                        <input type="text" id="flexbasis1" name="flexbasis1" placeholder="  Enter 1 to 12 value  ">
+                    </div>
+                    <div class="flex sel">
+                        <div id="alignself" for="as1">
+                            align-self : 
+                        </div>
+                        <select name="as1" id="as1">
+                            <option id="o" value="0">Select Value</option>
+                            <option id="o" value="1">auto</option>
+                            <option id="o" value="2">start</option>
+                            <option id="o" value="3">end</option>
+                            <option id="o" value="4">center</option>
+                            <option id="o" value="5">stretch</option>
+                            <option id="o" value="6">baseline</option>
+                        </select>
+                    </div>
+                </div>
             </div>
+
             <div class="b2">
-
+                <div class="flex cursor-pointer" onclick="hide(2)">
+                    <div id="l2">
+                        <img class=" w-8 h-8" src="../2.png" alt="">
+                    </div>
+                    <div class="t00">
+                        block 2
+                    </div>
+                </div>
+                <div class="block2hide" id="block2hide">
+                    <div class="flex">
+                        <div id="order" for="o2">
+                            Order : 
+                        </div>
+                        <select name="o2" id="o2">
+                            <option id="o" value="0">Select Value</option>
+                            <option id="o" value="1">1</option>
+                            <option id="o" value="2">2</option>
+                            <option id="o" value="3">3</option>
+                            <option id="o" value="4">4</option>
+                            <option id="o" value="5">first</option>
+                            <option id="o" value="6">last</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <div id="flexgrow" for="fg2">
+                            flex-grow : 
+                        </div>
+                        <select name="fg2" id="fg2">
+                            <option id="o" value="null">Select Value</option>
+                            <option id="o" value="0">0</option>
+                            <option id="o" value="1">1</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <div id="flexshrink" for="fs2">
+                            flex-Shrink : 
+                        </div>
+                        <select name="fs2" id="fs2">
+                            <option id="o" value="null">Select Value</option>
+                            <option id="o" value="0">0</option>
+                            <option id="o" value="1">1</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <label for="flexbasis2">flex-basis : </label>
+                        <input type="text" id="flexbasis2" name="flexbasis2" placeholder="  Enter 1 to 12 value  ">
+                    </div>
+                    <div class="flex sel">
+                        <div id="alignself" for="as2">
+                            align-self : 
+                        </div>
+                        <select name="as2" id="as2">
+                            <option id="o" value="0">Select Value</option>
+                            <option id="o" value="1">auto</option>
+                            <option id="o" value="2">start</option>
+                            <option id="o" value="3">end</option>
+                            <option id="o" value="4">center</option>
+                            <option id="o" value="5">stretch</option>
+                            <option id="o" value="6">baseline</option>
+                        </select>
+                    </div>
+                </div>
             </div>
+
             <div class="b3">
-
+                <div class="flex cursor-pointer" onclick="hide(3)">
+                    <div id="l3">
+                        <img class=" w-8 h-8" src="../2.png" alt="">
+                    </div>
+                    <div class="t00">
+                        block 3
+                    </div>
+                </div>
+                <div class="block1hide" id="block3hide">
+                    <div class="flex">
+                        <div id="order" for="o3">
+                            Order : 
+                        </div>
+                        <select name="o3" id="o3">
+                            <option id="o" value="0">Select Value</option>
+                            <option id="o" value="1">1</option>
+                            <option id="o" value="2">2</option>
+                            <option id="o" value="3">3</option>
+                            <option id="o" value="4">4</option>
+                            <option id="o" value="5">first</option>
+                            <option id="o" value="6">last</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <div id="flexgrow" for="fg3">
+                            flex-grow : 
+                        </div>
+                        <select name="fg3" id="fg3">
+                            <option id="o" value="null">Select Value</option>
+                            <option id="o" value="0">0</option>
+                            <option id="o" value="1">1</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <div id="flexshrink" for="fs3">
+                            flex-Shrink : 
+                        </div>
+                        <select name="fs3" id="fs3">
+                            <option id="o" value="null">Select Value</option>
+                            <option id="o" value="0">0</option>
+                            <option id="o" value="1">1</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <label for="flexbasis3">flex-basis : </label>
+                        <input type="text" id="flexbasis3" name="flexbasis3" placeholder="  Enter 1 to 12 value  ">
+                    </div>
+                    <div class="flex">
+                        <div id="alignself" for="as3">
+                            align-self : 
+                        </div>
+                        <select name="as3" id="as3">
+                            <option id="o" value="0">Select Value</option>
+                            <option id="o" value="1">auto</option>
+                            <option id="o" value="2">start</option>
+                            <option id="o" value="3">end</option>
+                            <option id="o" value="4">center</option>
+                            <option id="o" value="5">stretch</option>
+                            <option id="o" value="6">baseline</option>
+                        </select>
+                    </div>
+                </div>
             </div>
+
             <div class="b4">
-
+                <div class="flex cursor-pointer" onclick="hide(4)">
+                    <div id="l4">
+                        <img class=" w-8 h-8" src="../2.png" alt="">
+                    </div>
+                    <div class="t00">
+                        block 4
+                    </div>
+                </div>
+                <div class="block1hide" id="block4hide">
+                    <div class="flex">
+                        <div id="order" for="o4">
+                            Order : 
+                        </div>
+                        <select name="o4" id="o4">
+                            <option id="o" value="0">Select Value</option>
+                            <option id="o" value="1">1</option>
+                            <option id="o" value="2">2</option>
+                            <option id="o" value="3">3</option>
+                            <option id="o" value="4">4</option>
+                            <option id="o" value="5">first</option>
+                            <option id="o" value="6">last</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <div id="flexgrow" for="fg4">
+                            flex-grow : 
+                        </div>
+                        <select name="fg4" id="fg4">
+                            <option id="o" value="null">Select Value</option>
+                            <option id="o" value="0">0</option>
+                            <option id="o" value="1">1</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <div id="flexshrink" for="fs4">
+                            flex-Shrink : 
+                        </div>
+                        <select name="fs4" id="fs4">
+                            <option id="o" value="null">Select Value</option>
+                            <option id="o" value="0">0</option>
+                            <option id="o" value="1">1</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <label for="flexbasis4">flex-basis : </label>
+                        <input type="text" id="flexbasis4" name="flexbasis4" placeholder="  Enter 1 to 12 value  ">
+                    </div>
+                    <div class="flex">
+                        <div id="alignself" for="as4">
+                            align-self : 
+                        </div>
+                        <select name="as4" id="as4">
+                            <option id="o" value="0">Select Value</option>
+                            <option id="o" value="1">auto</option>
+                            <option id="o" value="2">start</option>
+                            <option id="o" value="3">end</option>
+                            <option id="o" value="4">center</option>
+                            <option id="o" value="5">stretch</option>
+                            <option id="o" value="6">baseline</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div class="submit" id="submit">RUN</div>
+
+            <div class="submit cursor-pointer" id="submit">RUN</div>
         </form>
     </div>
     
