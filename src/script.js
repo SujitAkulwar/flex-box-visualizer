@@ -10,26 +10,26 @@ var por = document.querySelector("#p04");
 var pof = document.querySelector("#p05");
 
 //
-var o1 = document.querySelector("#o1");
-var fg1 = document.querySelector("#fg1");
-var fs1 = document.querySelector("#fs1");
-var flexbasis1 = document.querySelector("#flexbasis1");
-var as1 = document.querySelector("#as1");
-var o2 = document.querySelector("#o2");
-var fg2 = document.querySelector("#fg2");
-var fs2 = document.querySelector("#fs2");
-var flexbasis2 = document.querySelector("#flexbasis2");
-var as2 = document.querySelector("#as2");
-var o3 = document.querySelector("#o3");
-var fg3 = document.querySelector("#fg3");
-var fs3 = document.querySelector("#fs3");
-var flexbasis3 = document.querySelector("#flexbasis3");
-var as3 = document.querySelector("#as3");
-var o4 = document.querySelector("#o4");
-var fg4 = document.querySelector("#fg4");
-var fs4 = document.querySelector("#fs4");
-var flexbasis4 = document.querySelector("#flexbasis4");
-var as4 = document.querySelector("#as4");
+var o1 = document.getElementById("o1");
+var fg1 = document.getElementById("fg1");
+var fs1 = document.getElementById("fs1");
+var flexbasis1 = document.getElementById("flexbasis1");
+var as1 = document.getElementById("as1");
+var o2 = document.getElementById("o2");
+var fg2 = document.getElementById("fg2");
+var fs2 = document.getElementById("fs2");
+var flexbasis2 = document.getElementById("flexbasis2");
+var as2 = document.getElementById("as2");
+var o3 = document.getElementById("o3");
+var fg3 = document.getElementById("fg3");
+var fs3 = document.getElementById("fs3");
+var flexbasis3 = document.getElementById("flexbasis3");
+var as3 = document.getElementById("as3");
+var o4 = document.getElementById("o4");
+var fg4 = document.getElementById("fg4");
+var fs4 = document.getElementById("fs4");
+var flexbasis4 = document.getElementById("flexbasis4");
+var as4 = document.querySelector("as4");
 //
 var boxarray = [[0, 0, 0, 0], [o1, fg1, fs1, as1], [o2, fg2, fs2, as2], [o3, fg3, fs3, as3], [o4, fg4, fs4, as4]];
 var boxarray2 = [["0", "0", "0", "0"], ["o1", "fg1", "fs1", 'as1'], ["o2", "fg2", "fs2", "as2"], ["o3", "fg3", "fs3", "as3"], ["o4", "fg4", "fs4", "as4"]];
@@ -81,17 +81,26 @@ function hide(e){
 // }
 
 submit.onclick = (e) => { // main function  
-    for (let i = 1; i < 5; i++){
-        for (let j = 0; j < 4; j++){
-            console.log((boxarray[i][j]));
-            // newval(i, j);
-            if((boxarray[i][j])=="0"){
-                // removeboxclass(i,j);
-            } else {
-                // removeboxclass(i,j);
-                console.log(boxclassarray[j][boxarray[i][j]].value);
-                box[i].classList.add(boxclassarray[j][boxarray[i][j]]);
-            }
+    // for (let i = 1; i < 5; i++){
+    //     for (let j = 0; j < 4; j++){
+    //         console.log((boxarray[i][j]));
+    //         // newval(i, j);
+    //         if((boxarray[i][j])=="0"){
+    //             // removeboxclass(i,j);
+    //         } else {
+    //             // removeboxclass(i,j);
+    //             console.log(boxclassarray[j][boxarray[i][j]].value);
+    //             box[i].classList.add(boxclassarray[j][boxarray[i][j]]);
+    //         }
+    //     }
+    // }
+    for (let i =0; i < 4; i++){
+        let temp = boxarray[1][i].value;
+
+        if (temp == "0") {
+            // console.log(boxclassarray[i][i]);
+        } else {
+            console.log(boxclassarray[i][temp]);
         }
     }
 
