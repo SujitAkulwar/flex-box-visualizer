@@ -29,17 +29,20 @@ var o4 = document.getElementById("o4");
 var fg4 = document.getElementById("fg4");
 var fs4 = document.getElementById("fs4");
 var flexbasis4 = document.getElementById("flexbasis4");
-var as4 = document.querySelector("as4");
+var as4 = document.getElementById("as4");
 //
-var boxarray = [[0, 0, 0, 0], [o1, fg1, fs1, as1], [o2, fg2, fs2, as2], [o3, fg3, fs3, as3], [o4, fg4, fs4, as4]];
-var boxarray2 = [["0", "0", "0", "0"], ["o1", "fg1", "fs1", 'as1'], ["o2", "fg2", "fs2", "as2"], ["o3", "fg3", "fs3", "as3"], ["o4", "fg4", "fs4", "as4"]];
-var boxclassarray = [["0", "order-1", "order-2", "order-3", "order-4", "order-first", "order-last"], ["0", "1", "2"], ["0", "1", "2"], ["0", "self-auto", "self-start", "self-end", "self-center", "self-stretch", "self-baseline"]];                                           
+var boxarray = [[o1, fg1, fs1, as1], [o2, fg2, fs2, as2], [o3, fg3, fs3, as3], [o4, fg4, fs4, as4]];
+var boxclassarray = [
+    ["0", "order-1", "order-2", "order-3", "order-4", "order-first", "order-last"],
+    ["0", "1", "2"],
+    ["0", "1", "2"],
+    ["0", "self-auto", "self-start", "self-end", "self-center", "self-stretch", "self-baseline"]];                                           
 
 var b1 = document.getElementById('b1');
 var b2 = document.getElementById('b2');
 var b3 = document.getElementById('b3');
 var b4 = document.getElementById('b4');
-var box = [0, b1, b2, b3, b4];
+var box = [b1, b2, b3, b4];
 
 
 var flexDirection = ["0","flex-row","flex-row-reverse","flex-col","flex-col-reverse"];
@@ -80,28 +83,10 @@ function hide(e){
 //     boxarray[i][j] = document.getElementById("#"+boxarray2[i][j]);
 // }
 
-submit.onclick = (e) => { // main function  
-    // for (let i = 1; i < 5; i++){
-    //     for (let j = 0; j < 4; j++){
-    //         console.log((boxarray[i][j]));
-    //         // newval(i, j);
-    //         if((boxarray[i][j])=="0"){
-    //             // removeboxclass(i,j);
-    //         } else {
-    //             // removeboxclass(i,j);
-    //             console.log(boxclassarray[j][boxarray[i][j]].value);
-    //             box[i].classList.add(boxclassarray[j][boxarray[i][j]]);
-    //         }
-    //     }
-    // }
-    for (let i =0; i < 4; i++){
-        let temp = boxarray[1][i].value;
+submit.onclick = (e) => {// main function
 
-        if (temp == "0") {
-            // console.log(boxclassarray[i][i]);
-        } else {
-            console.log(boxclassarray[i][temp]);
-        }
+    for (let i = 1; i < 6; i++){
+        removeclass(i);
     }
 
     if(poo.value=="0"){
@@ -109,42 +94,96 @@ submit.onclick = (e) => { // main function
     }else{
         bodys.classList.add("flex");
     }
-    if(poi.value=="0"){
-        removeclass(1);
-    }else{
-        removeclass(1);
+    
+    if(poi.value!="0"){
         bodys.classList.add(flexDirection[poi.value]);
     }
-    if(pot.value==="0"){
-        removeclass(2);
-    }else{
-        removeclass(2);
+    if(pot.value!="0"){
         bodys.classList.add(JustifyContent[pot.value]);
     }
-    if(poe.value==="0"){
-        removeclass(3);
-    }else{
-        removeclass(3);
+    if(poe.value!="0"){
         bodys.classList.add(flexwrap[poe.value]);
     }
-    if(por.value==="0"){
-        removeclass(4);
-    }else{
-        removeclass(4);
+    if(por.value!="0"){
         bodys.classList.add(alignitems[por.value]);
     }
-    if(pof.value==="0"){
-        removeclass(5);
-    }else{
-        removeclass(5);
+    if(pof.value!="0"){
         bodys.classList.add(aligncontent[pof.value]);
     }
-    if(pof.value==="0"){
-        removeclass(5);
-    }else{
-        removeclass(5);
-        bodys.classList.add(aligncontent[pof.value]);
+
+    for (let i = 0; i < 4; i++){
+        let temp = boxarray[0][i].value;
+        let check = boxclassarray[i][temp];
+        removeclassforbox(0,i); 
+        if (temp != "0") {
+            b1.classList.add(check);
+            console.log(boxclassarray[i][temp]);
+        }
     }
+    for (let i = 0; i < 4; i++){
+        let temp = boxarray[1][i].value;
+        let check = boxclassarray[i][temp];
+        removeclassforbox(1,i); 
+        if (temp != "0") {
+            b2.classList.add(check);
+            console.log(boxclassarray[i][temp]);
+        }
+    }
+    for (let i = 0; i < 4; i++){
+        let temp = boxarray[2][i].value;
+        let check = boxclassarray[i][temp];
+        removeclassforbox(2,i); 
+        if (temp != "0") {
+            b3.classList.add(check);
+            console.log(boxclassarray[i][temp]);
+        }
+    }
+    for (let i = 0; i < 4; i++){
+        let temp = boxarray[3][i].value;
+        let check = boxclassarray[i][temp];
+        removeclassforbox(3,i); 
+        if (temp != "0") {
+            b4.classList.add(check);
+            console.log(boxclassarray[i][temp]);
+        }
+    }
+
+
+    //because of error i value is not working in boxarray[]
+
+        // let temp = boxarray[3][0].value;
+        // let check = boxclassarray[0][temp];
+        // removeclassforbox(3,0); 
+        // if (temp != "0") {
+        //     b4.classList.add(check);
+        //     console.log(boxclassarray[0][temp]);
+        // }// 3 = box no & i = property no 
+
+ 
+        // temp = boxarray[3][1].value;
+        // check = boxclassarray[1][temp];
+        // removeclassforbox(3,1); 
+        // if (temp != "0") {
+        //     b4.classList.add(check);
+        //     console.log(boxclassarray[1][temp]);
+        // }// 3 = box no & i = property no 
+
+        // temp = boxarray[3][2].value;
+        // check = boxclassarray[2][temp];
+        // removeclassforbox(3,2); 
+        // if (temp != "0") {
+        //     b4.classList.add(check);
+        //     console.log(boxclassarray[2][temp]);
+        // }// 3 = box no & i = property no 
+
+        // temp = boxarray[3][3].value;
+        // check = boxclassarray[3][temp];
+        // removeclassforbox(3,3); 
+        // if (temp != "0") {
+        //     b4.classList.add(check);
+        //     console.log(boxclassarray[3][temp]);
+        // }// 3 = box no & i = property no 
+    
 
 }
 
@@ -185,3 +224,10 @@ function removeclass(e) {
 //     }
 // }
 
+function removeclassforbox(a, b) {
+    for (let i = 1; i < 10; i++){
+        if (boxclassarray[b][i]) {
+           box[a].classList.remove(boxclassarray[b][i]); 
+        }
+    }
+}
