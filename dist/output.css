@@ -537,6 +537,10 @@ video {
   order: 9999;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -545,19 +549,43 @@ video {
   display: flex;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .h-8 {
   height: 2rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-3\/6 {
   width: 50%;
 }
 
-.w-8 {
-  width: 2rem;
+.w-12 {
+  width: 3rem;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.shrink {
+  flex-shrink: 1;
 }
 
 .flex-grow {
+  flex-grow: 1;
+}
+
+.grow-0 {
+  flex-grow: 0;
+}
+
+.grow {
   flex-grow: 1;
 }
 
@@ -689,15 +717,101 @@ video {
   align-self: baseline;
 }
 
+.border {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-blue-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(29 78 216 / var(--tw-border-opacity));
+}
+
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
 *{
-  border : 1px solid red;
-  color: white;
-  background:black;
-  font-size:25px;
-  padding : 2px 2px;
+  /* border: 1px solid red; */
+  color: rgb(230,230,230);
+  background: rgb(25,25,25);
+  font-size: 24px;
+  transition : 0.8s;
+  font-family: 'Poppins', sans-serif;
+  border-radius:2px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+body{
+}
+
+select{
+  background: rgb(50,50,50);
+  color:rgb(200,200,200);
+}
+
+.bodyhide,.block1hide,.block2hide,.block3hide,.block4hide{
+  padding-left:40px;
+  background:rgb(50,50,50);
+}
+
+#b1,#b2,#b3,#b4{
+  text-shadow : 1px 1px black;
+  vertical-align: middle;
+  line-height: normal;
 }
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
-
