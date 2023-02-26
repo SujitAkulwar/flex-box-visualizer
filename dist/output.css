@@ -779,37 +779,54 @@ video {
   letter-spacing: 0.025em;
 }
 
-*{
+* {
   /* border: 1px solid red; */
-  color: rgb(230,230,230);
-  background: rgb(25,25,25);
+  color: rgb(230, 230, 230);
+  background: rgb(25, 25, 25);
   font-size: 24px;
-  transition : 0.8s;
-  font-family: 'Poppins', sans-serif;
-  border-radius:2px;
+  transition: 0.8s;
+  font-family: "Poppins", sans-serif;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar {
   width: 0px;
 }
 
-body{
+body {
+  margin: 0;
 }
 
-select{
-  background: rgb(50,50,50);
-  color:rgb(200,200,200);
+select {
+  background: rgb(50, 50, 50);
+  color: rgb(200, 200, 200);
 }
 
-.bodyhide,.block1hide,.block2hide,.block3hide,.block4hide{
-  padding-left:40px;
-  background:rgb(50,50,50);
+.bodyhide,
+.block1hide,
+.block2hide,
+.block3hide,
+.block4hide {
+  padding-left: 40px;
+  background: rgb(50, 50, 50);
 }
 
-#b1,#b2,#b3,#b4{
-  text-shadow : 1px 1px black;
+#b1,
+#b2,
+#b3,
+#b4 {
+  text-shadow: 1px 1px black;
   vertical-align: middle;
   line-height: normal;
+}
+
+.frame{
+  max-height: 500px;
+  overflow: scroll;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 .hover\:cursor-pointer:hover {
