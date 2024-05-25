@@ -39,8 +39,6 @@ select {
 }
 
 .frame{
-  max-height: 500px;
-  overflow: scroll;
   border: 1px solid white;
   border-radius: 10px;
   padding: 0;
